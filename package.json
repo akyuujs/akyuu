@@ -1,0 +1,36 @@
+{
+  "name": "akyuu",
+  "version": "0.0.0",
+  "description": "Yet another web framework based on express.js named Akyuu.",
+  "main": "lib/akyuu.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akyuujs/akyuu.git"
+  },
+  "keywords": [
+    "web",
+    "app",
+    "http",
+    "application",
+    "framework",
+    "middleware"
+  ],
+  "author": "XadillaX <i@2333.moe>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akyuujs/akyuu/issues"
+  },
+  "homepage": "https://github.com/akyuujs/akyuu#readme",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "express": "^4.13.4",
+    "sugar": "^1.4.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.2.2"
+  }
+}
