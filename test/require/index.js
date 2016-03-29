@@ -1,7 +1,7 @@
 /**
  * XadillaX created at 2016-03-23 16:05:01 With ♥
  *
- * Copyright (c) 2016 Souche.com, all rights
+ * Copyright (c) 2016 akyuu.moe, all rights
  * reserved.
  */
 "use strict";
