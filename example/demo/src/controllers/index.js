@@ -11,7 +11,7 @@ const Joi = Akyuu.Joi;
 
 let routers = module.exports = [];
 
-function jiandan(req, resp) {
+const jiandan = (req, resp) => {
     let page = req.params.page;
     req.app.service.get("jiandan").getOOXX(page, function(err, result) {
         if(err) {
@@ -20,7 +20,7 @@ function jiandan(req, resp) {
 
         resp.succ(result);
     });
-}
+};
 
 routers.push({
     router: "/jiandan",
