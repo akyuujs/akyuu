@@ -13,7 +13,7 @@ let routers = module.exports = [];
 
 function jiandan(req, resp) {
     let page = req.params.page;
-    akyuu.service.get("jiandan").getOOXX(page, function(err, result) {
+    req.app.service.get("jiandan").getOOXX(page, function(err, result) {
         if(err) {
             return resp.error(err);
         }
