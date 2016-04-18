@@ -9,3 +9,8 @@
 var Akyuu = module.exports = require("./lib/akyuu");
 
 Akyuu.Joi = require("joi");
+
+Akyuu.Service = {
+    HTTP: require("./lib/requester/http"),
+    Hessian: require("./lib/requester/hessian")
+};

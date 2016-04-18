@@ -11,6 +11,30 @@ const Joi = Akyuu.Joi;
 
 let routers = module.exports = [];
 
+function jiandan(req, resp) {
+    let page = req.params.page;
+    akyuu.service.get("jiandan").getOOXX(page, function(err, result) {
+        if(err) {
+            return resp.error(err);
+        }
+
+        resp.succ(result);
+    });
+}
+
+routers.push({
+    router: "/jiandan",
+    processors: [ jiandan ]
+});
+
+routers.push({
+    router: "/jiandan/:page",
+    processors: [ jiandan ],
+    params: {
+        page: Joi.number().integer()
+    }
+});
+
 routers.push({
     body: {},
     desc: "Test router.",
