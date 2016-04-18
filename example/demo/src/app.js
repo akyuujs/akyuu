@@ -6,8 +6,9 @@
  */
 "use strict";
 
+/* globals -akyuu */
 const Akyuu = require("../../../");
-const akyuu = new Akyuu(`${__dirname}`);
+const akyuu = global.akyuu = new Akyuu(`${__dirname}`);
 
 akyuu.init(err => {
     if(err) {

@@ -1,0 +1,11 @@
+{
+    "libs": [],
+    "loadEagerly": [
+        "index.js",
+        "lib/akyuu.js"
+    ],
+    "plugins": {
+        "node": {
+        }
+    }
+}

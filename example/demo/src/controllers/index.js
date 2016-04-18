@@ -27,7 +27,8 @@ routers.push({
     processors: [(req, resp) => {
         resp.succ({
             app: req.query.app,
-            welcome: `Hello ${req.params[0]}!`
+            welcome: `Hello ${req.params[0]}!`,
+            modelData: akyuu.model.get("test").getData()
         });
     }]
 });
