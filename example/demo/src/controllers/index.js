@@ -9,20 +9,21 @@
 const Akyuu = require("../../../../");
 const Joi = Akyuu.Joi;
 
-var routers = module.exports = [];
+let routers = module.exports = [];
 
 routers.push({
-    method: "GET",
-    router: /^\/(.*)$/,
-    desc: "Test router.",
-    query: {
-        app: Joi.string().default("akyuu").min(1).max(5)
-    },
     body: {},
+    desc: "Test router.",
+    error: {},
+    method: "GET",
     params: {
         0: Joi.string().min(0).max(5).default("akyuu")
     },
-    error: {},
+    query: {
+        app: Joi.string().default("akyuu").min(1).max(5)
+    },
+    router: /^\/(.*)$/,
+    
     processors: [(req, resp) => {
         resp.succ({
             app: req.query.app,
