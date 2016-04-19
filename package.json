@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/akyuujs/akyuu#readme",
   "dependencies": {
+    "config": "^1.20.1",
     "debug": "^2.2.0",
     "ero": "^0.1.0",
     "express": "^4.13.4",

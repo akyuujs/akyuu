@@ -6,6 +6,6 @@ test:
 		--require should
 
 demo:
-	@NODE_ENV=demo $(NODEMON_PATH) ./example/demo/src/app.js
+	@NODE_ENV=demo $(NODEMON_PATH) --ignore lib/config ./example/demo/src/app.js
 
 .PHONY: test

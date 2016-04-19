@@ -23,6 +23,14 @@ const jiandan = (req, resp) => {
 };
 
 routers.push({
+    router: "/config",
+    processors: [(req, resp) => {
+        console.log(Akyuu.config.func);
+        resp.succ(Akyuu.config);
+    }]
+});
+
+routers.push({
     router: "/jiandan",
     processors: [ jiandan ]
 });
