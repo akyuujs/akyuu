@@ -34,6 +34,7 @@
     "sugar": "^1.4.1"
   },
   "devDependencies": {
+    "akyuu-adapter-toshihiko": "^1.0.0",
     "cheerio": "^0.20.0",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1",
