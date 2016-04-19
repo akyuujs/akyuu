@@ -7,5 +7,8 @@
 module.exports = {
     main: {
         adapter: "toshihiko",
+        database: "test",
+        username: "root",
+        password: ""
     }
 };

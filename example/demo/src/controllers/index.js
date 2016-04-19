@@ -60,7 +60,7 @@ routers.push({
         resp.succ({
             app: req.query.app,
             welcome: `Hello ${req.params[0]}!`,
-            modelData: akyuu.model.get("test").getData()
+            modelData: Akyuu.get().model.get("test").getData()
         });
     }]
 });
