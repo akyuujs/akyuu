@@ -7,6 +7,9 @@
 "use strict";
 
 module.exports = {
+    requestLogger: {
+        enabled: true
+    },
     jsonCuoutput: {
         enabled: true,
         output: "underscore"
