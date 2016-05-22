@@ -30,6 +30,7 @@
     "ero": "^0.1.0",
     "express": "^4.13.4",
     "joi": "^8.0.5",
+    "lodash.invert": "^4.1.1",
     "moment": "^2.13.0",
     "on-finished": "^2.3.0",
     "on-headers": "^1.0.1",

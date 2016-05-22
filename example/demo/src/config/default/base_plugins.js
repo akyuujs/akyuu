@@ -10,7 +10,8 @@ module.exports = {
     bodyParser: {
         enabled: true,
         urlencoded: {
-            limit: "100kb"
+            limit: "100kb",
+            extended: false
         }
     },
     cookieParser: {
