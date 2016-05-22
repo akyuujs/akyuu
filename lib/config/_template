@@ -40,7 +40,7 @@ for(var i = 0; i < dirs.length; i++) {
                 (dirs[i].substr(0, dirs[i].length - 5));
 
             var temp = {};
-            temp[filename] = require(realDir);
+            temp[filename.camelize(false)] = require(realDir);
             core = Object.merge(core, temp, true, true);
         }
     }

@@ -6,8 +6,8 @@
  */
 "use strict";
 
-const Akyuu = require("../../../../");
-const Toshihiko = Akyuu.get().connection.get("main");
+const akyuu = require("../../../../").get();
+const Toshihiko = akyuu.connection.get("main");
 
 const Toshi = Toshihiko.define("toshi", [
     { name: "id", type: Toshihiko.TYPE.String, primaryKey: true }
