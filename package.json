@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "akyuu-adapter-toshihiko": "^1.0.1",
+    "akyuu-body-parser": "^1.0.0",
     "akyuu-cookie-parser": "^1.0.1",
     "akyuu-json-cuoutput": "^1.0.0",
     "cheerio": "^0.20.0",
