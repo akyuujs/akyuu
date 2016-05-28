@@ -44,6 +44,21 @@ routers.push({
 });
 
 routers.push({
+    router: "/error/:err",
+    processors: [(req, resp) => {
+        const Err = req.app.Errors[req.params.err.camelize(true)];
+        if(undefined === Err) {
+            return resp.error(new Error("Unknown error."));
+        }
+
+        resp.error(new Err("这是一个样例。"));
+    }],
+    params: {
+        err: Joi.string()
+    }
+});
+
+routers.push({
     body: {},
     desc: "Test router.",
     error: {},
