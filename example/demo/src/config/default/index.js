@@ -7,6 +7,11 @@
 "use strict";
 
 module.exports = {
+    server: {
+        port: 3000,
+        autoStatusCode: true
+    },
+
     test: {
         test1: true
     },

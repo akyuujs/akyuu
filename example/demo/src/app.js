@@ -16,6 +16,6 @@ akyuu.init(err => {
         process.exit(4);
     }
 
-    akyuu.listen(3000);
-    console.log("Akyuu-demo listened on port 3000.");
+    akyuu.start();
+    console.log(`Akyuu-demo listened on port ${akyuu.config.server.port}.`);
 });

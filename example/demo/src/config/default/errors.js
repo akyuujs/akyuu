@@ -9,7 +9,7 @@
 module.exports = {
     Example: {
         code: 100,
-        status: 200,
+        status: 418,
         business: "this is an example error."
     }
 };
