@@ -6,23 +6,22 @@
  */
 "use strict";
 
-const Akyuu = require("../../../../");
-const Joi = Akyuu.Joi;
+const akyuu = require("../../../../");
+const V = akyuu.Validator;
 
 const routers = module.exports = [];
 
 routers.push({
     query: {
-        id: Joi.string().required()
+        id: V.string().required()
     },
     router: "/toshi",
     processors: [(req, resp) => {
-        let Toshi = req.app.model.get("toshi");
+        let Toshi = akyuu.model.get("toshi");
 
         resp.succ({
             sql: Toshi.where({ id: req.query.id }).makeSQL("find"),
-
-            config: req.app.config.connections.main
+            config: akyuu.config.connections.main
         });
     }]
 });

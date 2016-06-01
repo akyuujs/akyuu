@@ -6,14 +6,14 @@
  */
 "use strict";
 
-const Akyuu = require("../../../../");
-const Joi = Akyuu.Joi;
+const akyuu = require("../../../../");
+const V = akyuu.Validator;
 
 let routers = module.exports = [];
 
 const jiandan = (req, resp) => {
     let page = req.params.page;
-    req.app.service.get("jiandan").getOOXX(page, function(err, result) {
+    akyuu.service.get("jiandan").getOOXX(page, function(err, result) {
         if(err) {
             return resp.error(err);
         }
@@ -25,8 +25,8 @@ const jiandan = (req, resp) => {
 routers.push({
     router: "/config",
     processors: [(req, resp) => {
-        console.log(Akyuu.config.func);
-        resp.succ(Akyuu.config);
+        console.log(akyuu.config.func);
+        resp.succ(akyuu.config);
     }]
 });
 
@@ -39,14 +39,14 @@ routers.push({
     router: "/jiandan/:page",
     processors: [ jiandan ],
     params: {
-        page: Joi.number().integer()
+        page: V.number().integer()
     }
 });
 
 routers.push({
     router: "/error/:err",
     processors: [(req, resp) => {
-        const Err = req.app.Errors[req.params.err.camelize(true)];
+        const Err = akyuu.Errors[req.params.err.camelize(true)];
         if(undefined === Err) {
             return resp.error(new Error("Unknown error."));
         }
@@ -54,7 +54,7 @@ routers.push({
         resp.error(new Err("这是一个样例。"));
     }],
     params: {
-        err: Joi.string()
+        err: V.string()
     }
 });
 
@@ -64,10 +64,10 @@ routers.push({
     error: {},
     method: "GET",
     params: {
-        0: Joi.string().min(0).max(5).default("akyuu")
+        0: V.string().min(0).max(5).default("akyuu")
     },
     query: {
-        app: Joi.string().default("akyuu").min(1).max(5)
+        app: V.string().default("akyuu").min(1).max(5)
     },
     router: /^\/(.*)$/,
     
@@ -75,7 +75,7 @@ routers.push({
         resp.succ({
             app: req.query.app,
             welcome: `Hello ${req.params[0]}!`,
-            modelData: Akyuu.get().model.get("test").getData()
+            modelData: akyuu.model.get("test").getData()
         });
     }]
 });

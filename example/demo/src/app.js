@@ -6,8 +6,7 @@
  */
 "use strict";
 
-const Akyuu = require("../../../");
-const akyuu = Akyuu.create(`${__dirname}`);
+const akyuu = require("../../../");
 
 akyuu.init(err => {
     if(err) {

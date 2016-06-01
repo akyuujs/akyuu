@@ -6,9 +6,12 @@
  */
 "use strict";
 
+var path = require("path");
+
 module.exports = {
     server: {
         port: 3000,
+        root: path.join(__dirname, "../../"),
         autoStatusCode: true
     },
 

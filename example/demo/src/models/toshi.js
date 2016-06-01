@@ -6,7 +6,7 @@
  */
 "use strict";
 
-const akyuu = require("../../../../").get();
+const akyuu = require("../../../../");
 const Toshihiko = akyuu.connection.get("main");
 
 const Toshi = Toshihiko.define("toshi", [
