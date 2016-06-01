@@ -8,45 +8,14 @@
 
 require("sugar");
 
-var _defaultAkyuu = null;
-var _akyuues = {};
+var config = require("./lib/config");
+if(!config.server) {
+     throw new Error("Server section is required in config.");
+ }
 
-var Akyuu = module.exports = {};
+var akyuu = new (require("./lib/akyuu"))(config.server.root);
 
-/**
- * create
- * @param {String} root the project root path for Akyuu
- * @param {String} [name] this akyuu instance name
- * @returns {Akyuu} the akyuu object
- */
-Akyuu.create = function(root, name) {
-    var akyuu = new (require("./lib/akyuu"))(root);
+akyuu.Validator = require("joi");
+akyuu.Service = require("./lib/requester");
 
-    if(name) _akyuues[name] = akyuu;
-    else {
-        _defaultAkyuu = akyuu;
-    }
-
-    return akyuu;
-};
-
-/**
- * get
- * @param {String} [name] the akyuu instance name
- * @returns {Akyuu} the akyuu object
- */
-Akyuu.get = function(name) {
-    if(!name) return _defaultAkyuu;
-    else {
-        return _akyuues[name];
-    }
-};
-
-Akyuu.Joi = require("joi");
-
-Akyuu.Service = {
-    HTTP: require("./lib/requester/http"),
-    Hessian: require("./lib/requester/hessian")
-};
-
-Akyuu.config = require("./lib/config");
+module.exports = akyuu;
