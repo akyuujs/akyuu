@@ -27,7 +27,7 @@
   "dependencies": {
     "config": "^1.20.1",
     "debug": "^2.2.0",
-    "ero": "^0.2.0",
+    "ero": "^0.2.3",
     "express": "^4.13.4",
     "joi": "^8.0.5",
     "lodash.invert": "^4.1.1",
