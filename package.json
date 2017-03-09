@@ -30,12 +30,12 @@
     "ero": "^0.2.3",
     "express": "^4.13.4",
     "joi": "^8.0.5",
+    "lodash": "^4.17.4",
     "lodash.invert": "^4.1.1",
     "moment": "^2.13.0",
     "on-finished": "^2.3.0",
     "on-headers": "^1.0.1",
     "spidex": "^2.1.1",
-    "sugar": "^2.0.4",
     "winston": "^2.2.0"
   },
   "devDependencies": {

@@ -6,8 +6,6 @@
  */
 "use strict";
 
-require("sugar");
-
 var config = require("./lib/config");
 if(!config.server) {
      throw new Error("Server section is required in config.");
