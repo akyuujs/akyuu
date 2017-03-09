@@ -1,6 +1,6 @@
 {
   "name": "akyuu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Yet another web framework based on express.js named Akyuu.",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "on-finished": "^2.3.0",
     "on-headers": "^1.0.1",
     "spidex": "^2.1.1",
-    "sugar": "^1.4.1",
+    "sugar": "^2.0.4",
     "winston": "^2.2.0"
   },
   "devDependencies": {
