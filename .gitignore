@@ -36,3 +36,6 @@ lib/config/*.js
 
 # Optional vscode directory
 .vscode
+
+# Optional WebStorm directory
+.idea
