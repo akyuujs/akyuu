@@ -6,13 +6,15 @@
  */
 "use strict";
 
+const changeCase = require("change-case");
+
 const akyuu = require("../../../../");
 const V = akyuu.Validator;
 
-let routers = module.exports = [];
+const routers = module.exports = [];
 
 const jiandan = (req, resp) => {
-    let page = req.params.page;
+    const page = req.params.page;
     akyuu.service.get("jiandan").getOOXX(page, function(err, result) {
         if(err) {
             return resp.error(err);
@@ -24,10 +26,10 @@ const jiandan = (req, resp) => {
 
 routers.push({
     router: "/config",
-    processors: [(req, resp) => {
+    processors: [ function(req, resp) {
         console.log(akyuu.config.func);
         resp.succ(akyuu.config);
-    }]
+    } ]
 });
 
 routers.push({
@@ -45,14 +47,14 @@ routers.push({
 
 routers.push({
     router: "/error/:err",
-    processors: [(req, resp) => {
-        const Err = akyuu.Errors[req.params.err.camelize(true)];
+    processors: [ function(req, resp) {
+        const Err = akyuu.Errors[changeCase.pascalCase(req.params.err)];
         if(undefined === Err) {
             return resp.error(new Error("Unknown error."));
         }
 
         resp.error(new Err("这是一个样例。"));
-    }],
+    } ],
     params: {
         err: V.string()
     }
@@ -70,12 +72,12 @@ routers.push({
         app: V.string().default("akyuu").min(1).max(5)
     },
     router: /^\/(.*)$/,
-    
-    processors: [(req, resp) => {
+
+    processors: [ function(req, resp) {
         resp.succ({
             app: req.query.app,
             welcome: `Hello ${req.params[0]}!`,
             modelData: akyuu.model.get("test").getData()
         });
-    }]
+    } ]
 });

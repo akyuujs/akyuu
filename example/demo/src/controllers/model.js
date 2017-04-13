@@ -16,12 +16,12 @@ routers.push({
         id: V.string().required()
     },
     router: "/toshi",
-    processors: [(req, resp) => {
-        let Toshi = akyuu.model.get("toshi");
+    processors: [ function(req, resp) {
+        const Toshi = akyuu.model.get("toshi");
 
         resp.succ({
             sql: Toshi.where({ id: req.query.id }).makeSQL("find"),
             config: akyuu.config.connections.main
         });
-    }]
+    } ]
 });

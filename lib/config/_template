@@ -1,10 +1,10 @@
-var config = require("config");
-var fs = require("fs");
-var path = require("path");
+// vim: set filetype=javascript:
+const fs = require("fs");
+const path = require("path");
 
-var _ = require("lodash");
+const _ = require("lodash");
 
-var core;
+let core;
 
 try {
     core = require("<%= path %>/<%= type %>");
@@ -12,17 +12,18 @@ try {
     core = {};
 }
 
-var dir = "<%= path %>/<%= type %>";
-var dirs;
+const dir = "<%= path %>/<%= type %>";
+let dirs;
 try {
     dirs = fs.readdirSync(dir);
 } catch(e) {
     dirs = [];
 }
 
-for(var i = 0; i < dirs.length; i++) {
-    var stat;
-    var realDir = path.join(dir, dirs[i]);
+
+for(let i = 0; i < dirs.length; i++) {
+    let stat;
+    const realDir = path.join(dir, dirs[i]);
     try {
         stat = fs.statSync(realDir);
     } catch(e) {
@@ -35,11 +36,11 @@ for(var i = 0; i < dirs.length; i++) {
         if(_.endsWith(realDir, "/index.js") || _.endsWith(realDir, "/index.json")) {
             core = _.merge(core, require(realDir));
         } else if(_.endsWith(realDir, ".js") || _.endsWith(realDir, ".json")) {
-            var filename = _.endsWith(realDir, ".js") ?
-                (dirs[i].substr(0, dirs[i].length - 3)) :
-                (dirs[i].substr(0, dirs[i].length - 5));
+            const filename = _.endsWith(realDir, ".js") ?
+                dirs[i].substr(0, dirs[i].length - 3) :
+                dirs[i].substr(0, dirs[i].length - 5);
 
-            var temp = {};
+            const temp = {};
             temp[_.camelCase(filename)] = require(realDir);
             core = _.merge(core, temp);
         }

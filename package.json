@@ -42,8 +42,11 @@
     "akyuu-adapter-toshihiko": "^1.0.1",
     "akyuu-body-parser": "^1.0.0",
     "akyuu-cookie-parser": "^1.0.1",
-    "akyuu-json-cuoutput": "^1.0.0",
+    "akyuu-json-cuoutput": "^2.0.0",
+    "change-case": "^3.0.1",
     "cheerio": "^0.20.0",
+    "eslint": "^3.19.0",
+    "eslint-config-xadillax-style": "^1.10.0",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1",
     "should": "^8.2.2"

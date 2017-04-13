@@ -6,12 +6,12 @@
  */
 "use strict";
 
-var config = require("./lib/config");
+const config = require("./lib/config");
 if(!config.server) {
-     throw new Error("Server section is required in config.");
- }
+    throw new Error("Server section is required in config.");
+}
 
-var akyuu = new (require("./lib/akyuu"))(config.server.root);
+const akyuu = new (require("./lib/akyuu"))(config.server.root);
 
 akyuu.Validator = require("joi");
 akyuu.Service = require("./lib/requester");
