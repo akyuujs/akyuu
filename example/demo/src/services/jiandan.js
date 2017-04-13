@@ -26,6 +26,7 @@ class JiandanXXOO extends HTTP {
      * @param {String} content the content string
      * @param {Object} header the response header
      * @param {Number} status the response status
+     * @return {Object} the information
      */
     wrapResponse(content, header, status) {
         if(status !== 200) {
@@ -41,11 +42,11 @@ class JiandanXXOO extends HTTP {
 
         const list = [];
         $("ol.commentlist > li").each(function() {
-            if($(this).attr("id") === "adsense") return;
+            if($(this).attr("id") === "adsense") return;                // eslint-disable-line
 
-            const author = $(this).find(".author strong").text();
-            const commentId = parseInt($(this).attr("id").substr(8));
-            const image = $(this).find(".view_img_link").attr("href");
+            const author = $(this).find(".author strong").text();       // eslint-disable-line
+            const commentId = parseInt($(this).attr("id").substr(8));   // eslint-disable-line
+            const image = $(this).find(".view_img_link").attr("href");  // eslint-disable-line
 
             list.push({
                 commentId: commentId,
@@ -64,6 +65,7 @@ class JiandanXXOO extends HTTP {
      * getOOXX
      * @param {Number} [page] the ooxx page
      * @param {Function} callback the callback function
+     * @return {void}
      */
     getOOXX(page, callback) {
         if(typeof page === "function") {
@@ -71,8 +73,8 @@ class JiandanXXOO extends HTTP {
             page = null;
         }
 
-        var router = "";
-        if(page) router += ("/page-" + page);
+        let router = "";
+        if(page) router += `/page-${page}`;
 
         this.get(router, function(err, result) {
             return callback(err, result);
