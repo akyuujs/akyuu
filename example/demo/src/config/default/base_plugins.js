@@ -20,8 +20,5 @@ module.exports = {
     },
     requestLogger: {
         enabled: true
-    },
-    asyncPlugin: {
-        enabled: true
     }
 };
