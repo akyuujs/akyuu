@@ -7,20 +7,14 @@ class AsyncPlugin {
     plug(callback) {
         const self = this;
         setTimeout(function() {
-            self.akyuu.get('/async_plugin', function(req, resp) {
-                resp.succ('success-load-sync-plugin');
+            self.akyuu.get("/async_plugin", function(req, resp) {
+                resp.succ("success-load-sync-plugin");
             });
             callback();
-        }, 500)
+        }, 500);
     }
 }
 
-/**
- * create
- * @param akyuu
- * @param options
- * @returns {AsyncPlugin}
- */
 exports.create = function(akyuu, options) {
     return new AsyncPlugin(akyuu, options);
 };

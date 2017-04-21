@@ -10,5 +10,12 @@ module.exports = {
     jsonCuoutput: {
         enabled: true,
         output: "underscore"
+    },
+    asyncPlugin: {
+        enabled: true
+    },
+    priorityPlugin: {
+        enabled: true,
+        weight: 10
     }
 };
