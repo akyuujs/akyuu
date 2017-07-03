@@ -27,6 +27,7 @@
   "homepage": "https://github.com/akyuujs/akyuu#readme",
   "dependencies": {
     "async": "^2.1.5",
+    "case": "^1.5.2",
     "config": "^1.20.1",
     "debug": "^2.2.0",
     "ero": "^0.2.3",
