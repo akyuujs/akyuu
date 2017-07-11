@@ -1,6 +1,6 @@
 {
   "name": "akyuu",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Yet another web framework based on express.js named Akyuu.",
   "main": "index.js",
   "scripts": {
