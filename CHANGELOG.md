@@ -6,13 +6,27 @@
 </tr>
 <tr>
 <td>
+<a href="#0.4.0">0.4.0</a><br />
 <a href="#0.3.0">0.3.0</a><br />
 </td>
 </tr>
 </table>
 
+<a id="0.4.0"></a>
+## 2017-07-28, Version 0.4.0 (Current), @XadillaX
+
+### Notable changes
+
+* **Configuration**
+  * add an environment variable to decide whether generate configuration file or
+    not.
+
+### Commits
+
+* [[`2b08b1777f`](https://github.com/akyuujs/akyuu/commit/2b08b1777f6efcb2012ad0b59892be0071069cd5)] - **(SEMVER-MINOR) config**: add an env var to generate config or not (XadillaX) [#25](https://github.com/akyuujs/akyuu/pull/25)
+
 <a id="0.3.0"></a>
-## 2017-07-11, Version 0.3.0 (Current), @XadillaX
+## 2017-07-11, Version 0.3.0, @XadillaX
 
 ### Notable changes
 
