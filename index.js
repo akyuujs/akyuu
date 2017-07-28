@@ -17,3 +17,5 @@ akyuu.Validator = require("joi");
 akyuu.Service = require("./lib/requester");
 
 module.exports = akyuu;
+
+akyuu.startCluster = require("akyuu-cluster").startCluster.bind(akyuu, __dirname);

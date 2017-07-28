@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/akyuujs/akyuu#readme",
   "dependencies": {
+    "akyuu-cluster": "^1.0.0",
     "async": "^2.1.5",
     "case": "^1.5.2",
     "config": "^1.20.1",
