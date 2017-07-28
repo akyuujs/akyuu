@@ -15,6 +15,12 @@ module.exports = {
         autoStatusCode: true
     },
 
+    cluster: {
+        workerCount: 2,
+        entry: path.join(__dirname, "../../app.js"),
+        limit: 2
+    },
+
     test: {
         test1: true
     },
