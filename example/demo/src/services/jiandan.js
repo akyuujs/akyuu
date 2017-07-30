@@ -13,7 +13,7 @@ const HTTP = require("../../../../").Service.HTTP;
 /**
  * @class JiandanXXOO
  */
-class JiandanXXOO extends HTTP {
+class Jiandan extends HTTP {
     /**
      * @constructor
      */
@@ -82,4 +82,4 @@ class JiandanXXOO extends HTTP {
     }
 }
 
-module.exports = JiandanXXOO;
+module.exports = Jiandan;
