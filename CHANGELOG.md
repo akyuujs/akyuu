@@ -6,14 +6,29 @@
 </tr>
 <tr>
 <td>
+<a href="#0.5.0">0.5.0</a><br />
 <a href="#0.4.0">0.4.0</a><br />
 <a href="#0.3.0">0.3.0</a><br />
 </td>
 </tr>
 </table>
 
+<a id="0.5.0"></a>
+## 2017-10-23, Version 0.5.0 (Current), @DuanPengfei
+
+### Notable changes
+
+* **Cluster**
+  * Add the dependency of akyuu-cluster and make logger to adapt cluster.
+
+### Commits
+
+* [[`2b08b1777f`](https://github.com/akyuujs/akyuu/commit/2b08b1777f6efcb2012ad0b59892be0071069cd5)] - **example**: fix jiandan page loading failed & some eslint error (@xiaoqiangsdl) [#33](https://github.com/akyuujs/akyuu/pull/33)
+* [[`503a140b20`](https://github.com/akyuujs/akyuu/commit/503a140b203ae89b759a27a98684fd31b3189367)] - **service**: fix http use error (@mapleincode) [#31](https://github.com/akyuujs/akyuu/pull/31)
+* [[`32417bc8a4`](https://github.com/akyuujs/akyuu/commit/32417bc8a41bff2c1e6b617e46344d53a3d9cd4a)] - **(SEMVER-MINOR) cluster, logger**: support for akyuu.startCluster() (@XadillaX) [#28](https://github.com/akyuujs/akyuu/pull/28)
+
 <a id="0.4.0"></a>
-## 2017-07-28, Version 0.4.0 (Current), @XadillaX
+## 2017-07-28, Version 0.4.0, @XadillaX
 
 ### Notable changes
 
