@@ -11,14 +11,14 @@ const cheerio = require("cheerio");
 const HTTP = require("../../../../").Service.HTTP;
 
 /**
- * @class JiandanXXOO
+ * @class Jiandan
  */
-class JiandanXXOO extends HTTP {
+class Jiandan extends HTTP {
     /**
      * @constructor
      */
     constructor() {
-        super("http://jandan.net/ooxx");
+        super("https://jandan.net/ooxx");
     }
 
     /**
@@ -82,4 +82,4 @@ class JiandanXXOO extends HTTP {
     }
 }
 
-module.exports = JiandanXXOO;
+module.exports = Jiandan;
