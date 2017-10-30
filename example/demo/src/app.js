@@ -6,9 +6,12 @@
  */
 "use strict";
 
+const path = require("path");
+
 const akyuu = require("../../../");
 
-akyuu.init(err => {
+akyuu.setTemplateRoot(path.resolve(__dirname, "templates"));
+akyuu.init(function(err) {
     if(err) {
         console.error("Failed to start akyuu.js");
         console.error(err.stack);
