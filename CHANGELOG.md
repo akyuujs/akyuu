@@ -6,12 +6,26 @@
 </tr>
 <tr>
 <td>
+<a href="#0.5.1">0.5.1</a><br />
 <a href="#0.5.0">0.5.0</a><br />
 <a href="#0.4.0">0.4.0</a><br />
 <a href="#0.3.0">0.3.0</a><br />
 </td>
 </tr>
 </table>
+
+<a id="0.5.1"></a>
+## 2018-03-02, Version 0.5.1 (Current), @DuanPengfei
+
+### Notable changes
+
+* **Core**
+  * Fix can't set template root and engine before `init()`.
+
+### Commits
+
+* [[`146512f75e`]](https://github.com/akyuujs/akyuu/commit/146512f75e308691d3db1475e6a11ef4080bb549) - akyuu: move `init()` to constructor (@XadillaX) [#38](https://github.com/akyuujs/akyuu/pull/38)
+
 
 <a id="0.5.0"></a>
 ## 2017-10-23, Version 0.5.0 (Current), @DuanPengfei
